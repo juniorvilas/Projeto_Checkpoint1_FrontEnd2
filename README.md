@@ -1,7 +1,11 @@
 
-Checkpoint 01 - Front-end II
 
-Site do projeto: https://felipe00007.github.io/checkpoint01_Front02/
+
+Checkpoint 01 da Matéria de Front-end II
+
+2 Bimestre
+
+Site do projeto: 
 
 
 
