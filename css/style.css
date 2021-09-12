@@ -1,6 +1,8 @@
-/* Aplicação de boas práticas, fonte e reset do posicionamento do body */
 
+/* Importando url da fonte */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Oswald:wght@500;700&display=swap');
+
+/* Aplicação de boas práticas, fonte e reset do posicionamento do body */
 *{
     margin: 0;
     padding: 0;
@@ -10,13 +12,14 @@
     scroll-behavior: smooth; 
 }
 
-/* Definição de tamanho, cores e fontes do elemento raiz do documento */
+/* Definição de tamanho, cores e fontes do elemento raiz do documento
+Colando em variaveis para ficar dinamico o site */
 :root {
     --ideal-viewport-width: 1600;
     --max-width: 1600px;
     --bg-color: #202225;
     --bg-color-secondary: #2f3137;
-    --bg-color-secondary-light: hsl(225, 8%, 60%);
+    --bg-color-secondary-light:rgba(255, 255, 255, 0.52);
     --text-color: #fff;
     --text-color-dark: hsl(0, 0%, 70%);
     --text-color-black: hsl(0, 0%, 0%);
@@ -25,11 +28,12 @@
     --font-normal: 'DM Sans', sans-serif;
 }
 
-/* Posição do cabeçalho */
+/* Posição do cabeçalho fixo */
 header{
     position: fixed; 
 }
 
+/*Edição de FILMES no navbar */
 /* Transformação da fonte para letras maiúsculas e em negrito */
 .navbar-brand{
     
@@ -42,7 +46,7 @@ p {
     text-indent: 1.5em;    
 }
 
-/* Tamanho da imagem */
+/* Tamanho padrão da imagem */
 img {
     width: 200px;
     height: 310px;
@@ -63,7 +67,8 @@ video{
 
 /* Definição de cor, margin e fonte para a label */
 label{
-    color: #0b0c0c;
+   
+    color: var(--bg-color);
     margin-left: 10px;
     font-weight: bold;
 }
@@ -90,7 +95,7 @@ label{
 .cadastrar__container {
     min-height: 400px;
     width: 300px;
-    background-color:rgba(255, 255, 255, 0.52);
+    background-color:var(--bg-color-secondary-light);
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -106,7 +111,7 @@ label{
 /* Definição de margin, cor, alinhamento e fonte do "cadastrar" */
 .cadastra__title {
 margin-bottom: 15px;
-color: #000000;
+color: var(--text-color-black);
 text-align: center;
 text-transform: uppercase;
 font-weight: bold;
@@ -165,7 +170,7 @@ button.btn:hover{
 
 /* Definição de cor do background do hover */
 button.navbar-toggler:hover {
-    background-color: #fa08087c;
+    background-color: var(--contraste-color);
 }
 
 /* Definição de tamanho do favicon */
@@ -189,7 +194,7 @@ button.navbar-toggler:hover {
    text-align: center;
    border-radius: 5px;
    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-   background-color: rgba(255, 255, 255, 0.52); 
+   background-color: var(--bg-color-secondary-light);
 }
 
 /* Definição da transformação e transição do hover */
@@ -200,16 +205,16 @@ button.navbar-toggler:hover {
 
 /* Definição de background, borda, margin, padding e cor dos cards já inseridos na página de filmes */
 .finalizado{
-    background-color: #202020;
+    background-color: var(--bg-color);
     border-radius: 0px 0px 10px 10px ;
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 20px;
     padding: 5px;
-    color: white;
+    color: var(--text-color);
 }
 
-/* Definição de fonte em negrito */
+/* Definição de fonte em negrito, colocando !important para subir a prioridade */
 h4{
     font-weight: bold !important;
     
@@ -234,8 +239,8 @@ footer {
     width: 100%;
     height: 60px; 
     box-shadow: 0px 5px 10px rgba(255, 3, 3, 0.76);
-    background-color: #202020;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     text-align: center;
   }
 
@@ -314,13 +319,13 @@ img.chat {
 /* Definição de texto, cor e margin do link [x] para fechar o form */
 #fecharForm {   
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     margin-left: 260px;   
 }
 
 /* Definição de cor e alinhamento da label do formulário de contato */
 #formContato label {
-    color: white;
+    color: var(--text-color);
     text-align: left;
 }
 
@@ -336,10 +341,10 @@ img.chat {
     padding:10px;
     width:320px;
     height:auto;
-    background-color: #202020;
+    background-color: var(--bg-color);
     border-radius: 8px;
     align-items: center;
-    color:white;
+    color: var(--text-color);
   }
 
 
@@ -399,7 +404,7 @@ img.chat {
 /* Animação Input */
 .item-form input:focus {
     border: 2px solid var(--text-color);
-    box-shadow: 0 0 8px 0 white;
+    box-shadow: 0 0 8px 0 var(--text-color);
 }
 
 /* Definição de padding, tamanho, borda, background, cor, fonte, margin e alinhamento do Botão Contato */
@@ -432,7 +437,7 @@ img.chat {
 /* Definição de borda e box-shadow do campo de mensagem */
 textarea:focus {
     border: 2px solid var(--text-color);
-    box-shadow: 0 0 8px 0 white;
+    box-shadow: 0 0 8px 0 var(--text-color);
 }
 
 /* Estilização do campo mensagem do form contato com padding, tamanho, borda, background, cor, fonte e cursor */
